@@ -1,0 +1,13 @@
+/usr/bin/ld: CMakeFiles/mcl_node.dir/src/mcl_node.cpp.o: in function `MCLNode::MCLNode()':
+mcl_node.cpp:(.text._ZN7MCLNodeC2Ev[_ZN7MCLNodeC5Ev]+0x286): undefined reference to `LandmarkManager::loadFromCSV(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/usr/bin/ld: mcl_node.cpp:(.text._ZN7MCLNodeC2Ev[_ZN7MCLNodeC5Ev]+0x5e9): undefined reference to `LandmarkManager::getLandmarks() const'
+/usr/bin/ld: CMakeFiles/mcl_node.dir/src/mcl_node.cpp.o: in function `MCLNode::landmarksCallback(std::shared_ptr<sensor_msgs::msg::PointCloud2_<std::allocator<void> > >)':
+mcl_node.cpp:(.text._ZN7MCLNode17landmarksCallbackESt10shared_ptrIN11sensor_msgs3msg12PointCloud2_ISaIvEEEE[_ZN7MCLNode17landmarksCallbackESt10shared_ptrIN11sensor_msgs3msg12PointCloud2_ISaIvEEEE]+0x40): undefined reference to `LandmarkManager::getLandmarks() const'
+/usr/bin/ld: mcl_node.cpp:(.text._ZN7MCLNode17landmarksCallbackESt10shared_ptrIN11sensor_msgs3msg12PointCloud2_ISaIvEEEE[_ZN7MCLNode17landmarksCallbackESt10shared_ptrIN11sensor_msgs3msg12PointCloud2_ISaIvEEEE]+0x9e3): undefined reference to `LandmarkManager::hasLandmark(int) const'
+/usr/bin/ld: mcl_node.cpp:(.text._ZN7MCLNode17landmarksCallbackESt10shared_ptrIN11sensor_msgs3msg12PointCloud2_ISaIvEEEE[_ZN7MCLNode17landmarksCallbackESt10shared_ptrIN11sensor_msgs3msg12PointCloud2_ISaIvEEEE]+0xa09): undefined reference to `LandmarkManager::getLandmark(int) const'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/mcl_node.dir/build.make:210: mcl_node] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/mcl_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
+---
+Failed   <<< mcl_localization [1min 4s, exited with code 2]
